@@ -1,9 +1,9 @@
-@media and (min-width:764px) {}
-
-
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+        font-style: normal;
+        font-family: "Lato", sans-serif;
 }
 
 html {
@@ -12,7 +12,7 @@ html {
     flex-wrap: nowrap;
     justify-content: center;
     /* border: 5px solid red; */
-    width: 1500px;
+    max-width: 1600px;
     background-color: #7d828b5d;
 }
 
@@ -42,44 +42,52 @@ img {
     width: 100%;
 }
 
+.nav #toggler,
+.fas {
+    display: none;
+}
+
+.nav-logo {
+    /* margin: 10px 40px 0 0; */
+    width: 15vw;
+    height: fit-content;
+    /* border: 4px dotted violet; */
+}
 
 
 .nav-ul {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 38px;
+    gap: 4vw;
     width: fit-content;
     list-style: none;
     height: 9vh;
-    width: 40vw;
+    width: auto;
     /* border: 2px solid darkblue; */
 }
 
 .nav-ul-li-a {
     text-decoration: none;
-    color: #3d3d3d;
-    margin: 5px 25px 5px 0;
+    color: #2e2a2a;
 
 }
 
 .nav-ul-li-a:hover {
-    margin: 5px 25px 5px 0;
-    color: #888888;
+    color: #4b4646;
 
 }
 
 .nav-ul-li-a:active {
     text-decoration: none;
-    color: #262626;
-    margin: 5px 25px 5px 0;
+    color: #0b127f;
 
 }
 
 .nav-login {
-    margin: 0 20px 0 0;
-    height: 7vh;
-    width: 12vw;
+    margin: 0 10px 0 0;
+        height: 6vh;
+        width: 14vw;
     font-weight: bolder;
     border-radius: 170px;
     border: 1px rgb(138 138 138) solid;
@@ -87,32 +95,15 @@ img {
     &:hover {
         cursor: pointer;
         font-weight: bolder;
-        background-color: #d1ddec;
+        background-color: #c4d5ea;
     }
 
     &:active {
         cursor: pointer;
         font-weight: bolder;
-        background-color: #a1c5f0;
-    }
-}
-
-.nav-login:hover {
-    /* margin: 0 50px 0 0;
-    height: 7vh;
-    width: 12vw;
-    border-radius: 170px;
-    background-color: #d1ddec; */
-    /* border: 2px rgb(120, 29, 19) solid; */
-}
-
-.nav-login:active {
-    /* margin: 0 50px 0 0;
-    height: 7vh;
-    width: 12vw;
-    border-radius: 170px;
-    background-color: #8da9cd; */
-    /* border: 2px rgb(120, 29, 19) solid; */
+        color: #f3f3f3;
+            background-color: #5787c2;
+        }
 }
 
 
@@ -128,7 +119,6 @@ img {
 
 .img-box-camels {
     width: 100%;
-    height: 35vh;
 
 }
 
@@ -206,7 +196,7 @@ img {
     position: relative;
     top: 5px;
     margin: 0 5px 0 5px;
-    width: 1vw;
+    width: 1.2vw;
     /* border: 2px solid saddlebrown; */
 
 }
@@ -321,6 +311,7 @@ img {
     &:hover {
         cursor: pointer;
         font-weight: bold;
+        color: rgb(31, 1, 1);
         background-color: #7fa5cc;
     }
 
@@ -328,6 +319,7 @@ img {
         cursor: pointer;
         font-weight: bold;
         border: 1px solid #2083e6;
+        color: rgb(230, 230, 227);
         background-color: #4e8bc8;
     }
 

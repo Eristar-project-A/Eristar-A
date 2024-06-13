@@ -1,9 +1,59 @@
-@media (max-width:764px) {
-    * {
-        margin: 0;
-        padding: 0;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+        font-family: "Lato", sans-serif;
     }
-
+    
+                                                                                                                                body {
+                                                                                                                                    background-color: #e4e6e6;
+                                                                                                                                }
+                                                                
+                                                                                                                                .nav {
+                                                                                                                                    display: flex;
+                                                                
+                                                                                                                                }
+                                                                
+                                                                                                                                .nav-logo {
+                                                                                                                                    /* width: 100px; */
+                                                                                                                                }
+                                                                
+                                                                                                                                .nav-ul {
+                                                                                                                                    /* list-style: none;*/
+                                                                                                                                    display: flex;
+                                                                                                                                    /* gap: 20px; */
+                                                                                                                                }
+                                                                
+                                                                                                                                .nav-ul-li-a {}
+                                                                
+                                                                                                                                .nav-ul-li-a:hover {
+                                                                                                                                    color: #888888;
+                                                                                                                                }
+                                                                
+                                                                                                                                .nav-login {}
+                                                                
+                                                                                                                                .nav-toggler {
+                                                                                                                                    display: none;
+                                                                                                                                }
+                                                                
+                                                                                                                                .nav-toggler-label {
+                                                                                                                                    display: none;
+                                                                                                                                    flex-direction: column;
+                                                                                                                                    cursor: pointer;
+                                                                                                                                }
+                                                                
+                                                                                                                                .nav-toggler-label span {
+                                                                                                                                    background-color: #333;
+                                                                                                                                    border-radius: 10px;
+                                                                                                                                    display: block;
+                                                                                                                                    height: 3px;
+                                                                                                                                    margin: 5px 0;
+                                                                                                                                    width: 25px;
+                                                                                                                                }
+                                                                
+                                                                                                                                /* Media Queries      */
+                                                                
+                                                                                                                                @media (max-width: 768px) {
     html {
         display: inline;
         align-items: center;
@@ -25,7 +75,7 @@
     }
 
     .nav-logo {
-        width: 17vw;
+        width: 20vw;
     }
 
     .nav-ul {
@@ -33,7 +83,7 @@
         flex-direction: column;
         width: 100%;
         position: absolute;
-        top: 61px;
+        top: 65px;
         left: 3px;
         background-color: #f8f4f4;
         padding: 10px;
@@ -41,8 +91,7 @@
 
     .nav-ul li {
         display: block;
-
-        margin: 10px 0;
+        margin: 4px 0;
     }
 
     .nav-ul-li-a {
@@ -50,25 +99,40 @@
         /* border: 2px solid rgb(44, 20, 3); */
 
         &:hover {
-            color: #818181;
+            color: #607a73;
         }
 
         &:active {
-            color: #cfcfcf;
+            color: #055bd4;
         }
     }
 
     .nav-toggler:checked+.nav-toggler-label+.nav-logo+.nav-ul {
         display: flex;
+        flex-direction: column;
+            align-items: flex-start;
         width: 47vw;
+        height: 30vh;
         background-image: url(/Eri-star/Img/camels.jpg);
         background-size: 47vw 30vh;
         background-repeat: no-repeat;
         border-radius: 5px;
+        margin: 6px 0 0 0;
+            z-index: 1;
     }
 
     .nav-toggler:checked+.nav-toggler-label+.nav-logo+.nav-ul+.nav-login {
         display: block;
+        position: absolute;
+            top: 32vh;
+            left: 31vw;
+            height: 7vh;
+            width: 15vw;
+            background-size: 47vw 30vh;
+            background-repeat: no-repeat;
+            border-radius: 50px;
+            margin: 0;
+            z-index: 1;
     }
 
     .nav-toggler-label {
@@ -76,7 +140,7 @@
     }
 
     .nav-login {
-        display: block;
+        display: none;
         width: 20vw;
     }
 
@@ -91,24 +155,19 @@
     .footer {
         display: flex;
         flex-direction: column;
-        /* position: relative; */
-        /* border: 5px solid lawngreen; */
-        width: 100%;
+            width: 100%;
         height: fit-content;
         background-color: #707ea0d1;
 
     }
 
-    /* footer svg {
-    color: red;
-    border: #000000 2px solid;
-} */
-
-    .footer,
-    h2 :not(#h2) {
+                                                                .footer,
+                                                                h2 {
+                                                                    position: relative;
+                                                                    top: 1vw;
         font-size: 1.6rem;
         color: rgb(17, 19, 18);
-        margin: 0 0 0 0;
+        grid-row: span 2;
         /* border: 2px solid saddlebrown; */
     }
 
@@ -117,17 +176,19 @@
     a :not(.nav-ul-li-a) {
         font-size: 1em;
         text-decoration: none;
-        margin: 0 0 -7px 0;
+        margin: 0 0 2vh 0;
         color: rgb(31, 36, 34);
+        position: relative;
+            top: 2vh;
         /* border: 2px solid rgb(63, 38, 21); */
     }
 
 
 
     .foo-div1 {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
+        display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
         width: 100%;
         height: fit-content;
         justify-content: space-around;
@@ -153,12 +214,14 @@
     }
 
     .foo-box {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        flex-wrap: nowrap;
-        width: 10vw;
+        display: grid;
+            /* grid-template-columns: 1fr 1fr; */
+            grid-template-rows: 1fr;
+            align-items: center;
+            justify-items: center;
+            width: 30vw;
         height: 17vh;
+        margin: 0 1.1vw 0 0;
         /* border: 3px solid cadetblue; */
     }
 
@@ -172,6 +235,16 @@
         color: #000000;
         width: 100%;
         border: none;
+        margin: 2px 0 0 0;
+        }
+        
+        .foo-div-img-logo2 {
+            width: auto;
+            height: 15vh;
+            grid-column: span 3;
+            position: relative;
+            left: 40vw;
+            /* border: 2px dodgerblue dotted; */
     }
 
     /*  footer span */
@@ -180,13 +253,15 @@
     .footer-div2 {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
-        /* border: 2px solid seagreen; */
-        height: 4vh;
-        width: 76vw;
+        justify-content: space-evenly;
+            align-items: center;
+            /* border: 2px solid seagreen; */
+            height: auto;
+                width: 100%;
     }
 
     .foo-div2-p {
+        width: auto;
         color: #403f3f;
         margin: 3px 0 0 0;
         /* border: 2px solid sandybrown; */
@@ -197,7 +272,7 @@
         display: flex;
         flex-direction: row;
         position: relative;
-        left: 6.2vw;
+        left: 10vw;
         width: fit-content;
         height: fit-content;
         /* border: 2px solid darkblue; */
@@ -206,9 +281,12 @@
 
     .foo-span-div2,
     a {
-        /* border: #181818 solid 2px ; */
+    /* border: #181818 solid 2px ; */
         width: fit-content;
         height: fit-content;
+    color: #1b2270;
+        text-decoration: none;
+    }
     }
 
     .foo-path {
@@ -217,6 +295,10 @@
         &:hover {
             background-color: #363636;
             border: 2px solid rgb(73, 58, 46);
+        &:active {
+                background-color: #101010;
+        
+            }
         }
     }
 
@@ -227,4 +309,5 @@
         height: 18px;
         /* border: 2pxl solid rgb(37, 17, 47); */
     }
+
 }

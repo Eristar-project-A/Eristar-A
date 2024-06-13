@@ -1,3 +1,6 @@
 n/
 samples/
 n.html
+*.txt
+*.json
+.vscode

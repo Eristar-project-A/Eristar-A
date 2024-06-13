@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eri-star</title>
+    <title>Search</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -15,26 +15,24 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Jersey+25+Charted&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style1.css">
-</head>
-<style>
-    .search-rt-con-box0 a {
-        color: black;
-        text-decoration: none;
-        /* border: 2px solid seagreen; */
-    }
+        <link rel="stylesheet" href="style.css">
 
-</style>
+</head>
 
 <body>
     <nav class="nav">
-        <img src="../Img/logo.png" alt="logo" class="nav-logo">
+        <input type="checkbox" id="toggler" class="nav-toggler">
+        <label for="toggler" class="nav-toggler-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <img class="nav-logo" src="..//Img/logo.png" alt="logo">
         <ul class="nav-ul">
-            <li><a class="nav-ul-li-a" href="">Home</a></li>
-            <li><a class="nav-ul-li-a" href="">Search</a></li>
-            <li><a class="nav-ul-li-a" href="">About</a></li>
-            <li><a class="nav-ul-li-a" href="">Contact</a></li>
+            <li><a class="nav-ul-li-a" target="_blank" href="..//Home/index.html">Home</a></li>
+            <li><a class="nav-ul-li-a" target="_blank" href="..//About/about.html">About</a></li>
+            <li><a class="nav-ul-li-a" target="_blank" href="..//Contact/contact.html">Contact</a></li>
+            <li><a class="nav-ul-li-a" target="_blank" href="..//search/search.html">Search</a></li>
         </ul>
         <button class="nav-login">Login</button>
     </nav>
@@ -45,19 +43,36 @@
         <h1 class="main-h1"><a href="">Search</a></h1>
         <div class="main-search-1">
             <ul class="main-search1-ul">
-                <li class="main-search1-ul-li">Artist Name <input type="search" class="main-search-ul-li-input"
+                <li class="main-search1-ul-li main-search1-ul-li1">Artist Name <input type="search" class="main-search-ul-li-input"
                         placeholder="Enter Name"></li>
-                <li class="main-search1-ul-li">Status
-                    <div class="custom-select" style="width:200px;">
-                        <span class="main-ul-span">All Status</span>
-                        <select class="main-ul-span">
-                            <option value="1">Audi</option>
-                            <option value="2">BMW</option>
-                            <option value="3">Citroen</option>
+                <li class="main-search1-ul-li main-search1-ul-li2">Status
+                    <div class="main-src1-ul-li-div_sel1">
+                        <label class=" main-ul-span-sta">All Status</label>
+                        <select class="main-ul-span-slct-sta">
+                            <option value=""></option>
+                            <option value="1">A</option>
+                            <option value="2">B</option>
+                            <option value="3">C</option>
+                            <option value="4">D</option>
+                            <option value="5">E</option>
+                            <option value="6">F</option>
                         </select>
+                    </div>
                 </li>
-            
-                <li class="main-search1-ul-li">Type <span class="main-ul-span">All Type</span>
+
+                <li class="main-search1-ul-li main-search1-ul-li2">Type
+                    <div class="main-src1-ul-li-div_sel1">
+                        <label class=" main-ul-span-sta">All type</label>
+                        <select class="main-ul-span-slct-sta">
+                            <option value=""></option>
+                            <option value="1">A</option>
+                            <option value="2">B</option>
+                            <option value="3">C</option>
+                            <option value="4">D</option>
+                            <option value="5">E</option>
+                            <option value="6">F</option>
+                        </select>
+                    </div>
                 </li>
             </ul>
             <button class="main-search1-Login">Search</button>
@@ -68,7 +83,7 @@
         <div class="main-boximg">
             <div class="search-rt-con-box1 search-rt-con-box0 ">
                 <img src="../Img/abeba.jpg" alt="Abeba haile" class="abeba">
-                <h3>Abeba Halie</h3>
+                <h3 id="abeba-halie">Abeba Halie</h3>
                 <buttuon class="search-rt-con-view-button" href="../search/view/Abeba.html"><a href="../search/view/Abeba.html"
                         target="_blank">View</a>
                 </buttuon>
@@ -111,15 +126,15 @@
                     class="bereket">
                 <h3>Bereket
                     Mengstab</h3>
-                    <buttuon class="search-rt-con-view-button" href="../search/view/Bereket.html"><a href="../search/view/Bereket.html"
-                            target="_blank">View</a> </buttuon>
+                <buttuon class="search-rt-con-view-button" href="../search/view/Bereket.html"><a href="../search/view/Bereket.html"
+                        target="_blank">View</a> </buttuon>
 
             </div>
             <div class="search-rt-con-box8 search-rt-con-box0 "><img src="../Img/fatinga.jpg" alt="Dehab Fatinga" class="fatinga">
                 <h3>Dehab
                     Fatinga</h3>
-                    <buttuon class="search-rt-con-view-button" href="../search/view/Fatinga.html"><a
-                            href="../search/view/Fatinga.html">View</a> </buttuon>
+                <buttuon class="search-rt-con-view-button" href="../search/view/Fatinga.html"><a
+                        href="../search/view/Fatinga.html">View</a> </buttuon>
 
             </div>
             <div class="search-rt-con-box9 search-rt-con-box0"><img src="../Img/Tsehaytu.jpg" alt="Tsehaytu Beraki"
@@ -133,7 +148,7 @@
     </main>
     <footer class="footer">
         <div class="foo-div1">
-            <img src="../Img/logo-2.png" alt="eri-stars" class="foo-div-img">
+            <img src="..//../Img/logo-2.png" alt="eri-stars" class="foo-div-img-logo2">
             <div class="foo-box foo-div-box1">
                 <h2>About</h2>
                 <h4><a href="'">Who We Are.</a></h4>
